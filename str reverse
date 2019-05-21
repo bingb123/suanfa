@@ -1,0 +1,24 @@
+#include<iostream>
+void swap(char *a, char *b)
+{
+	char c = *b;
+	*b = *a;
+	*a = c;
+}
+using namespace std;
+int main()
+{
+	char a[50] = { "I am a student" };
+	cout << a << endl;
+	int i = 0;
+	int j = strlen(a)-1;
+	while (i <j)
+	{
+		swap(&a[i], &a[j]);
+		i++;
+		j--;
+	}
+	cout << a;
+	system("pause");
+	return 0;
+}
